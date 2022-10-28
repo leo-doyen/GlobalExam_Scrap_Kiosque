@@ -47,10 +47,10 @@ time.sleep(1)
 
 
 try:
-    buttonOrg = driver.find_element(By.ID, 'form-organization-selection-939')
+    buttonOrg = driver.find_element(By.XPATH,'/html/body/div[1]/main/div/div/div/div/div[1]/div')
     buttonOrg.click()
 except:
-    print('ok')
+    print('Connnected')
 
 
 # permet de valider les cookies
@@ -58,7 +58,7 @@ cookies = driver.find_element(By.ID, 'axeptio_btn_acceptAll').click()
 
 # on recupere les la liste des articles de la section kioske
 articleDiv = driver.find_element(By.ID, 'tns-articles').find_elements(By.TAG_NAME, 'a')
-print(articleDiv)
+
 
 articleUrl = []
 for art in articleDiv:
