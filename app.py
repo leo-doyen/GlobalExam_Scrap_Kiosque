@@ -45,6 +45,14 @@ button.click()
 
 time.sleep(1)
 
+
+try:
+    buttonOrg = driver.find_element(By.ID, 'form-organization-selection-939')
+    buttonOrg.click()
+except:
+    print('ok')
+
+
 # permet de valider les cookies
 cookies = driver.find_element(By.ID, 'axeptio_btn_acceptAll').click()
 
