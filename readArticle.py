@@ -17,4 +17,8 @@ def read(articleUrl, driver):
             driver.execute_script("window.scrollTo(0, "+str(y)+")")
             y += 20  
             time.sleep(1)   
-
+            
+        fichier = open("alreadyReadArticles.txt", "a")
+        fichier.write(url)
+        fichier.write("\n")
+        fichier.close()
